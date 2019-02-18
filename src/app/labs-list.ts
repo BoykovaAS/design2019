@@ -1,0 +1,25 @@
+import {Lab} from "./lab"
+
+export const LABS: Lab[] = [
+    { title: 'Лабораторная работа 1', 
+    description: 'Разметка личной страницы, разработка UML Use Case' , 
+    page: 'https://raw.githubusercontent.com/wiki/viska97/design2019/lab1.md'},
+    { title: 'Лабораторная работа 2', 
+    description: '' , 
+    page: 'https://raw.githubusercontent.com/wiki/viska97/design2019/lab2.md'},
+    { title: 'Лабораторная работа 3', 
+    description: '' , 
+    page: 'https://raw.githubusercontent.com/wiki/viska97/design2019/lab3.md'},
+    { title: 'Лабораторная работа 4', 
+    description: '' , 
+    page: 'https://raw.githubusercontent.com/wiki/viska97/design2019/lab4.md'},
+    { title: 'Лабораторная работа 5', 
+    description: '' , 
+    page: 'https://raw.githubusercontent.com/wiki/viska97/design2019/lab5.md'},
+    { title: 'Лабораторная работа 6', 
+    description: '' , 
+    page: 'https://raw.githubusercontent.com/wiki/viska97/design2019/lab6.md'},
+    { title: 'Лабораторная работа 7', 
+    description: '' , 
+    page: 'https://raw.githubusercontent.com/wiki/viska97/design2019/lab7.md'},
+  ];

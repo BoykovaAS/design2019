@@ -9,18 +9,22 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from './material';
 import { ToolbarComponent } from './toolbar/toolbar.component';
 import { LabComponent } from './lab/lab.component'
+import { Design2019Module } from './design2019';
+import { ReferatComponent } from './referat/referat.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    LabComponent
+    LabComponent,
+    ReferatComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    Design2019Module
   ],
   providers: [],
   bootstrap: [AppComponent]

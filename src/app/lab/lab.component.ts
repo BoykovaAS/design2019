@@ -1,15 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders, HttpHeaderResponse } from '@angular/common/http';
+import { ViewEncapsulation } from '@angular/core';
+import {Lab} from '../lab'
+import {LABS} from '../labs-list'
 
 @Component({
   selector: 'app-lab',
   templateUrl: './lab.component.html',
-  styleUrls: ['./lab.component.scss']
+  styleUrls: ['./lab.component.scss'], encapsulation: ViewEncapsulation.None
 })
 export class LabComponent implements OnInit {
 
-  constructor(http: HttpClient) { 
-    //http.get.
+  labs = LABS
+
+  constructor() { 
+    
   }
 
   ngOnInit() {

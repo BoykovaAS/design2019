@@ -1,3 +1,5 @@
-export class Lab {
-    link: string;
-  }
+export class Lab{
+  title : string
+  description : string
+  page : string
+}

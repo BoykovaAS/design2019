@@ -1,3 +1,16 @@
-<p>
-  lab works!
-</p>
+<div *ngFor="let lab of labs" class="lab-item">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          {{lab.title}}
+        </mat-panel-title>
+        <mat-panel-description>
+          {{lab.description}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <markdown [src]="lab.page" class="markdown-body"></markdown>
+    </mat-expansion-panel>
+  </div>
+
+
+
