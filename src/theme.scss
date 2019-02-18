@@ -1,0 +1,9 @@
+@import '~@angular/material/theming';
+$design2019-primary: mat-palette($mat-deep-purple);
+$design2019-accent : mat-palette($mat-amber);
+$design2019-warn   : mat-palette($mat-red);
+$design2019: mat-light-theme(
+    $design2019-primary,
+    $design2019-accent,
+    $design2019-warn
+);
