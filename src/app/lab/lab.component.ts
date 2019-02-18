@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
-import {Lab} from '../lab'
 import {LABS} from '../labs-list'
 
 @Component({
