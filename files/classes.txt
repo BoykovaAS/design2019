@@ -42,6 +42,10 @@ class Study {
    studyTypeId : number
    teacherId : number
 }
+class User {
+   login : string
+   password : string
+}
 Study *-- Class
 Study *-- Room
 Study *-- Subject
