@@ -12,7 +12,13 @@
 
 .lab-item {
     padding: 5px;
-  }
+}
+
+mat-expansion-panel {
+    mat-expansion-panel-header {
+      height: auto!important; 
+    }
+}
 
 @media (max-width: 767px) {
     .markdown-body {
