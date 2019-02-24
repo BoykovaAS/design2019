@@ -14,10 +14,8 @@
     padding: 5px;
 }
 
-mat-expansion-panel {
-    mat-expansion-panel-header {
-      height: auto!important; 
-    }
+mat-expansion-panel-header {
+    height: 100% !important;
 }
 
 @media (max-width: 767px) {
