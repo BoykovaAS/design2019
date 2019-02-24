@@ -1,0 +1,52 @@
+@startuml
+class Class {
+   id : number
+   name : string
+   specialityId : number
+   course : number
+   semester : number
+}
+class Speciality {
+   id : number
+   name : string
+}
+class Teacher {
+   id : number
+   fio : string
+   chairId : number
+}
+class Chair {
+   id : number
+   name : string
+}
+class Room {
+   id : number
+   name : string
+   capacity : number
+}
+class Subject {
+   id : number
+   name : string
+}
+class StudyType {
+   id : number
+   name : string
+}
+class Study {
+   hour : number
+   time : string
+   classId : number
+   subclassId : number
+   roomId : number
+   subjectId : number
+   studyTypeId : number
+   teacherId : number
+}
+Study *-- Class
+Study *-- Room
+Study *-- Subject
+Study *-- StudyType
+Study *-- Teacher
+Class *-- Speciality
+Teacher *-- Chair
+@enduml
