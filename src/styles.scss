@@ -4,3 +4,7 @@
 @import "~github-markdown-css/github-markdown";
 @include mat-core();
 @include angular-material-theme($design2019);
+
+body{
+    margin: 0%;
+}

@@ -1,24 +1,33 @@
-<mat-sidenav-container fullscreen>
-  <app-toolbar class="mat-elevation-z5"></app-toolbar>
-  <div class="content-style">
-      <div class="left-panel">
-          <router-outlet></router-outlet>
+<div> 
+  <mat-toolbar class="mat-elevation-z5" color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <span>Design 2019</span>
+    <span class="spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button color="foreground" routerLink="/home">Главная</a>
+      <a mat-button color="foreground" routerLink="/labs">Лабораторные работы</a>
+      <a mat-button color="foreground" routerLink="/referat">Реферат</a>
+      <a mat-button color="foreground" routerLink="/project">Проект</a>
+    </div>
+
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="container">
+
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <a mat-button color="foreground" routerLink="/home">Главная</a>
+        <a mat-button color="foreground" routerLink="/labs">Лабораторные работы</a>
+        <a mat-button color="foreground" routerLink="/referat">Реферат</a>
+        <a mat-button color="foreground" routerLink="/project">Проект</a>
       </div>
-      <div class="right-panel">
-          <mat-card class="example-card">
-              <mat-card-header>
-                <mat-card-title>Материкин В.В.</mat-card-title>
-                <mat-card-subtitle>ИДБ-15-14</mat-card-subtitle>
-              </mat-card-header>
-              <mat-card-content>
-                <p>
-                  Данная страница посвящена отчетам по дисциплине "Проектирование информационных систем" (2019)
-                </p>
-              </mat-card-content>
-              <mat-card-actions>
-                  <a mat-button target="_blank" href="https://github.com/Viska97/design2019">Github</a>
-              </mat-card-actions>
-            </mat-card>
-      </div>
-  </div>
-</mat-sidenav-container>
+    </mat-sidenav>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

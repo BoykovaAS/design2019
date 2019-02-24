@@ -1,27 +1,42 @@
 .mat-elevation-z5 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%
- }
-  
-.content-style {
-    margin-top:62px;
-    padding: 5px;
-  }
-
-
-.left-panel
-{        
-    width:80%;
-    height:100%;
-    float:left;        
+  min-height:56px;
+  max-height:56px;
+  top: 0;
+  position: fixed;
+  z-index: 9;
 }
 
-.right-panel
-{       
-    width:20%;
-    height:100%;
-    float:left;
+.mat-toolbar{
+  height: 7vh;
+}
+
+div {
+  overflow: inherit;
+}
+
+.mat-sidenav-container{
+  background-color: lightskyblue;
+  min-height: 93vh !important;
+}
+
+a{
+  text-decoration: none;
+  white-space: normal;
+}
+
+button{
+  min-width: min-content;
+}
+
+.icon {
+  padding: 0 14px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.container {
+  position: fixed;
+  margin-top: 56px
 }

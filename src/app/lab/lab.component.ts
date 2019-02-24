@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
-import {LABS} from '../labs-list'
+import { LABS } from '../labs-list'
 
 @Component({
   selector: 'app-lab',

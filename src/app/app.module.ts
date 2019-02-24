@@ -5,25 +5,29 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import {MaterialModule} from './material';
-import { ToolbarComponent } from './toolbar/toolbar.component';
 import { LabComponent } from './lab/lab.component'
 import { Design2019Module } from './design2019';
 import { ReferatComponent } from './referat/referat.component';
+import { HomeComponent } from './home/home.component';
+import { ProjectComponent } from './project/project.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ToolbarComponent,
     LabComponent,
-    ReferatComponent
+    ReferatComponent,
+    HomeComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FlexLayoutModule,
     Design2019Module
   ],
   providers: [],
