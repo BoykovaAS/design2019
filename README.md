@@ -1,6 +1,6 @@
-# Design2019
+# Домашняя сттраница занятий по курсу "Проектирование информационных систем" (2019)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.1.
+Страница создана с помощью веб-фреймворка [Angular 7](https://github.com/angular/angular-cli) version 7.3.1.
 
 ## Development server
 
