@@ -1,0 +1,28 @@
+@startuml
+actor Пользователь as u
+participant "SPA веб-приложение" as w
+participant "Бекенд" as b
+database "База данных" as d
+activate w
+w -> b : Запрос списка групп
+activate b
+b -> d : Запрос выборки по группам
+d -> b : Список групп
+b -> b : Обработка списка групп
+b -> w : Возврат списка групп
+deactivate b
+w -> u : Отображение списка групп
+deactivate w
+u -> w : Выбор группы, подгруппы или даты
+activate w
+w -> u : Отображение выбора
+w -> b : Запрос расписания
+activate b
+b -> d : Запрос выборки расписания
+d -> b : Расписание
+b -> b : Обработка расписания
+b -> w : Возврат расписания
+deactivate b
+w -> u : Отображение расписания
+deactivate w
+@enduml
