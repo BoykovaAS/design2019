@@ -1,0 +1,127 @@
+@startuml
+() declarations
+() route
+() imports
+() DI
+() DOM
+() HTTP
+
+node "Browser" {
+
+[HTML] - DOM
+
+}
+
+node "Backend Server" {
+  [Backend Application] -- HTTP : "REST API"
+} 
+
+package "App Module" {
+
+component appmodule [
+NgModule
+
+app.module.ts
+]
+
+component index [
+Template
+
+index.html
+]
+
+
+DOM <- index
+appmodule ..> declarations
+index <-> appmodule
+appmodule . imports
+
+}
+
+package "Material Module" {
+
+component material [
+NgModule
+
+material.ts
+]
+
+imports <. material
+
+}
+
+package "App Component" {
+
+component appcomponent [
+Component
+
+app.component.ts
+]
+
+component apptemplate [
+Template
+
+app.component.html
+]
+
+DOM <- apptemplate
+declarations .. appcomponent
+appcomponent <--> apptemplate
+
+}
+
+package "App Routing Module" {
+
+component approutingmodule [
+NgModule
+
+app-routing.module.ts
+]
+
+imports -- approutingmodule
+approutingmodule --> route
+
+}
+
+package "Schedule Daily Component" {
+
+component schedcomponent [
+Component
+
+schedule-daily.component.ts
+]
+
+component schedtemplate [
+Template
+
+schedule-daily.component.html
+]
+
+component schedmodel [
+Model
+
+class.class.ts
+study.class.ts
+]
+
+declarations .. schedcomponent
+DOM <- schedtemplate
+schedcomponent . DI
+schedmodel -> schedcomponent
+route -- schedcomponent
+schedcomponent <--> schedtemplate
+}
+
+package "App Service" {
+
+component appservice [
+Injectable
+
+app.service.ts
+]
+
+appservice .> DI
+HTTP <-- appservice
+
+}
+@enduml
